@@ -12,7 +12,8 @@ module.exports = {
     try {
       await button.execute(interaction, client);
     } catch (error) {
-      throw new Error(`No code for this button!`);
+      console.log(`No code for this button!`);
+      interaction.reply("No code for this button.")
     }
   },
 };

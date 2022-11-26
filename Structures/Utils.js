@@ -52,7 +52,7 @@ module.exports = class Utils {
       const match = Connect.match(HOSTS_REGEX);
       if (!match) {
         return console.error(
-          chalk.red.bold(`[DATABASE]- Invalid connection string "${Connect}"`)
+          chalk.red.bold(`[DATABASE]- Invalid connection string "${Connect}" -- Add a MONGODB URL`)
         );
       }
       const dbOptions = {
@@ -86,7 +86,7 @@ module.exports = class Utils {
         console.warn(chalk.red.italic("Mongoose connection lost"));
       });
 
-      const dbModels = this.loadFiles("./Structures/models");
+      const dbModels = this.loadFiles("./models");
       let modelCount = 0;
       (await dbModels).forEach(async (file) => {
         modelCount++;

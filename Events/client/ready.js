@@ -19,7 +19,7 @@ module.exports = {
     */
     let acts = [
       {
-        name: "/commands",
+        name: "site.tyrion.ml",
         type: 5,
         status: "dnd",
       },

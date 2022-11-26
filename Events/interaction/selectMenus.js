@@ -59,7 +59,8 @@ module.exports = {
     try {
       await selectMenu.execute(interaction, client);
     } catch (error) {
-      throw new Error(`No code for this select menu!`);
+      console.log(`No code for this select menu!`);
+      interaction.reply(`No code for this select menu!`);
     }
   },
 };

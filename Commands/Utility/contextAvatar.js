@@ -18,7 +18,7 @@ module.exports = {
    * @returns
    */
   async execute(interaction, client) {
-    const target = interaction.options.getUser("user") || interaction.user;
+    const target = interaction.options.getUser("user");
     await target.fetch();
 
     const row = new ActionRowBuilder({

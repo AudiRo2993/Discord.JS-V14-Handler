@@ -9,11 +9,11 @@ const {
   ThreadMember,
   User,
 } = Partials;
-const Util = require("./Structures/Utils");
+const Util = require("./Utils");
 const { BotToken } = process.env;
-const { loadEvents } = require("./Handlers/Events");
-const { loadCommands } = require("./Handlers/Commands");
-const { loadComponents } = require("./Handlers/Components");
+const { loadEvents } = require("../Handlers/Events");
+const { loadCommands } = require("../Handlers/Commands");
+const { loadComponents } = require("../Handlers/Components");
 const chalk = require("chalk");
 
 class BOT extends Client {
@@ -30,7 +30,7 @@ class BOT extends Client {
         User,
       ],
     });
-    this.config = require("./Structures/config.json");
+    this.config = require("./config.json");
     this.commands = new Collection();
     this.subCommands = new Collection();
     this.events = new Collection();
@@ -47,17 +47,56 @@ class BOT extends Client {
 
   async init(token) {
     await loadEvents(this);
+    if(!BotToken) return console.log(chalk.bold.yellowBright(
+      `[this] -  Please add a Discord Token.  -  [file]: ".env"`
+    ))
     await this.login(BotToken).then(() => {
       console.log(
         chalk.bold.yellowBright(
-          `[this] - ${this.user.tag} has looged into Discord. `
+          `[this] - ${this.user.tag} has logged into Discord. `
         )
       );
+      console.log(
+        chalk.bold.yellowBright(
+          `┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ `
+        ),
+        
+      );
+      console.log(
+        chalk.bold.yellowBright(
+          `ONLINE `
+        ),
+        
+      );
+      
     });
     await loadCommands(this);
     await loadComponents(this);
     await this.utils.logger();
   }
 }
+process.on('unhandledRejection', (reason, p) => {
+  console.log('\n\n\n\n\n=== unhandled Rejection ==='.toUpperCase());
+  console.log('Reason: ', reason.stack ? String(reason.stack).gray : String(reason).gray);
+  console.log('Reason: ', reason.path ? String(reason.path).gray : String(reason).gray);
+  console.log('=== unhandled Rejection ===\n\n\n\n\n'.toUpperCase());
+});
+process.on("uncaughtException", (err, origin) => {
+  console.log('\n\n\n\n\n\n=== uncaught Exception ==='.toUpperCase());
+  console.log('Exception: ', err.stack ? err.stack : err)
+  console.log('=== uncaught Exception ===\n\n\n\n\n'.toUpperCase());
+})
+
+process.on('beforeExit', (code) => {
+  console.log('\n\n\n\n\n=== before Exit ==='.toUpperCase());
+  console.log('Code: ', code);
+  console.log('=== before Exit ===\n\n\n\n\n'.toUpperCase());
+});
+process.on('exit', (code) => {
+  console.log('\n\n\n\n\n=== exit ==='.toUpperCase());
+  console.log('Code: ', code);
+  console.log('=== exit ===\n\n\n\n\n'.toUpperCase());
+});
+
 
 module.exports = BOT;

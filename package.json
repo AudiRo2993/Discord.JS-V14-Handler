@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Discord-Robots/Discord.js-v14-Template.git"
+    "url": "git+https://github.com/AudiRo7652/Discord.JS-V14-Hander.git"
   },
   "keywords": [
     "template"
   ],
-  "author": "marv#8280",
+  "author": "AudiRo#7652",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Discord-Robots/Discord.js-v14-Template/issues"
+    "url": "https://github.com/AudiRo7652/Discord.JS-V14-Hander/issues"
   },
-  "homepage": "https://github.com/Discord-Robots/Discord.js-v14-Template#readme",
+  "homepage": "https://github.com/AudiRo7652/Discord.JS-V14-Hander/blob/main/README.md",
   "dependencies": {
     "@anishshobith/deeptype": "^1.1.0",
     "axios": "^0.27.2",

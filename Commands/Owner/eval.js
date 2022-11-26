@@ -80,7 +80,7 @@ module.exports = {
             .replace(/@/g, `@${String.fromCharCode(8203)}`)
             .replace(
               new RegExp(client.token),
-              `That is for me to know and you never to find out.`
+              `Imagine trying to get my token. HA! dmed the owner ur getting banned. also called ur parents, they said ur not allowed on Barbie Doll Simulator anymore.. GGs bro`
             );
         }
         return text;
