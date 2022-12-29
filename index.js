@@ -3,3 +3,4 @@ const BOT = require("./Structures/bot");
 const client = new BOT();
 
 client.init();
+d
