@@ -21,7 +21,7 @@ async function loadCommands(client) {
     }
 
     if (!command.data.name)
-      return console.error(`Commnd: ${file} doesn't have a name`);
+      return console.error(`[ERROR] Commnd: ${file} doesn't have a name!`);
     client.commands.set(command.data.name, command);
 
     if (command.developer) {

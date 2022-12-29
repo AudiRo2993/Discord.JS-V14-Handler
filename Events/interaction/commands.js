@@ -39,7 +39,7 @@ module.exports = {
         );
         if (!subCommandFie) {
           return interaction.reply({
-            content: "This sub command is outdated",
+            content: `This Sub-Command is **Outdated** / Crashed. Please check the Console, or contact the Developer -> https://site.tyrion.ml`,
             ephemeral: true,
           });
         }

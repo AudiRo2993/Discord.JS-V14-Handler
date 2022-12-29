@@ -19,7 +19,7 @@ module.exports = {
     */
     let acts = [
       {
-        name: "site.tyrion.ml",
+        name: "Made By -> site.tyrion.ml",
         type: 5,
         status: "dnd",
       },
@@ -50,5 +50,17 @@ module.exports = {
       });
       acts.push(currentAct);
     }, 15000);
+
+    // const readyChannel = client.channels.cache.get("") //Channel id where the bot shows it STARTED (webhook)
+    // readyChannel.createWebhook(`${client.user.username} Start - [ LOGS ]`, { // Webhook Name
+    //   avatar: 'https://cdn.discordapp.com/avatars/674985858142699532/a_74d0fbce1385ade42d4e0e52d3577b84.gif?size=1024', // Webhook Avatar
+    // })
+    //   .then(webhook => {
+    //     console.log(`Created webhook ${webhook}`)
+    //     webhook.send({ content: `Started ${client.user.tag} Successfuly at ${new Date().toLocaleString()} ' [ <t:${Math.floor(Date.now() / 1000)}> ]`})
+    //   })
+    //   .catch(console.error + "Please report this error to the Developer now.");
+
+      
   },
 };

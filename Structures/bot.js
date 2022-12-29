@@ -10,7 +10,7 @@ const {
   User,
 } = Partials;
 const Util = require("./Utils");
-const { BotToken } = process.env;
+const { BotToken } = process.env.BotToken;
 const { loadEvents } = require("../Handlers/Events");
 const { loadCommands } = require("../Handlers/Commands");
 const { loadComponents } = require("../Handlers/Components");
