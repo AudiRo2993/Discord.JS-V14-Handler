@@ -47,9 +47,7 @@ class BOT extends Client {
 
   async init(token) {
     await loadEvents(this);
-    if(!BotToken) return console.log(chalk.bold.yellowBright(
-      `[this] -  Please add a Discord Token.  -  [file]: ".env"`
-    ))
+    
     await this.login(BotToken).then(() => {
       console.log(
         chalk.bold.yellowBright(
