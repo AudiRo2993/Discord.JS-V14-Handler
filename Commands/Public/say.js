@@ -16,6 +16,8 @@ module.exports = {
     async execute(interaction, client) {
          const content = interaction.options.getString("content")
 
-         await interaction.reply({ content: `🚀 | Sent the message: \`${content}\``})
+         await interaction.reply({ content: `🚀 | Sent the message: \`${content}\``, ephemeral: true})
+	    
+	    await interaction.channel.send({ content: `${content}` })
     }
 }
