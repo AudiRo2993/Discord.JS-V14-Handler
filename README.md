@@ -17,6 +17,9 @@
 -DevGuild: The Developer guild for the bot[Developer commands will be loaded there] (Guild ID)<br />
 -Connect: MongoDB URL[Required for DataBase commands] ()<br />
 
+
+# You want Video Tutorials?
+> Check new Videos on my [Youtube](https://www.youtube.com/channel/UCmhda4mvoCyycUGoPG-8ihA)
 # Suggestions
 > You can suggest your `ideas` to our [Discord Server](https://site.tyrion.ml/discord)
 
