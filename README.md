@@ -27,4 +27,4 @@
 > Report bugs at https://github.com/AudiRo7652/Discord.JS-V14-Hander/issues or in our [Discord Server](https://dsc.gg/tyriondev)
 # Support me
 [![](https://www.paypalobjects.com/webstatic/icon/pp258.png)](https://paypal.me/audiro)
-[![](https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e1116779fc0a9bd5bdbcc7_Frame%206.png)](https://paypal.me/audiro)
+[![](https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e1116779fc0a9bd5bdbcc7_Frame%206.png)](https://ko-fi.com/audiro)
