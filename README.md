@@ -10,7 +10,7 @@
 
 # Setup
 > `.env` - Values
--AppID: Discord Bot ID (984461145475776532)\n
+-AppID: Discord Bot ID (984461145475776532)
 -BotToken: Discord Bot Token (...you tought)
 -BotOwnerID: Owner of the Bot ID (674985858142699532)
 -Secret: Discord bot Secret (in oAuth in https://discord.dev)

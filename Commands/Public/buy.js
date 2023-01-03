@@ -4,11 +4,10 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("buy")
         .setDescription("Shop at store.")
-        .addSubcommand((item) =>
-            item
-                .setName("item")
-                .setDescription("Buy an item from the shop.")
-        ),
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('item')
+                .setDescription('Select the Item')),
     /**
      * 
      * @param {ChatInputCommandInteraction} interaction 

@@ -2,13 +2,12 @@ const { SlashCommandBuilder, ChatInputCommandInteraction, Client, ActionRowBuild
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("buy")
-        .setDescription("Shop at store.")
-        .addStringOption((option) => {
-            option
-            .setName("content")
-            .setDescription("The text that i should say")
-        }),
+        .setName("say")
+        .setDescription("Say something.")
+        .addStringOption(option =>
+			option
+				.setName('content')
+				.setDescription('The content')),
     /**
      * 
      * @param {ChatInputCommandInteraction} interaction 
