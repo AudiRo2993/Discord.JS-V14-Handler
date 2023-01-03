@@ -1,21 +1,21 @@
 # Discord.JS-V14-Hander
  Made by AudiRo#7652 - LYXCODE Base
 # Tutorial
-> Download this code as ZIP and add it to your code editor. I prefer **Visual Studio Code**.
-> Open a new terminal and do `npm i` to install all required Packages
-> Fill in everything required in `.env` file, and `config.json`
-> run the bot by typing in terminal `node .`
-
+> Download this code as ZIP and add it to your code editor. I prefer **Visual Studio Code**.<br />
+> Open a new terminal and do `npm i` to install all required Packages<br />
+> Fill in everything required in `.env` file, and `config.json`<br />
+> run the bot by typing in terminal `node .`<br />
+> Rename `.env.example` file to `.env`<br />
 
 
 # Setup
 > `.env` - Values
--AppID: Discord Bot ID (984461145475776532)
--BotToken: Discord Bot Token (...you tought)
--BotOwnerID: Owner of the Bot ID (674985858142699532)
--Secret: Discord bot Secret (in oAuth in https://discord.dev)
--DevGuild: The Developer guild for the bot[Developer commands will be loaded there] (Guild ID)
--Connect: MongoDB URL[Required for DataBase commands] ()
+-AppID: Discord Bot ID (984461145475776532)<br />
+-BotToken: Discord Bot Token (...you tought)<br />
+-BotOwnerID: Owner of the Bot ID (674985858142699532)<br />
+-Secret: Discord bot Secret (in oAuth in https://discord.dev)<br />
+-DevGuild: The Developer guild for the bot[Developer commands will be loaded there] (Guild ID)<br />
+-Connect: MongoDB URL[Required for DataBase commands] ()<br />
 
 # Suggestions
 > You can suggest your `ideas` to our [Discord Server](https://site.tyrion.ml/discord)
