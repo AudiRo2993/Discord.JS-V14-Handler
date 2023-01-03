@@ -9,7 +9,7 @@
 
 
 # Setup
-> `.env` - Values
+> `.env` - Values<br />
 -AppID: Discord Bot ID (984461145475776532)<br />
 -BotToken: Discord Bot Token (...you tought)<br />
 -BotOwnerID: Owner of the Bot ID (674985858142699532)<br />
