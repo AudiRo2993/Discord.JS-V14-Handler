@@ -1,3 +1,20 @@
 {
-  "owners": ["674985858142699532"]
+  "owners": ["674985858142699532"],
+  "messages": {
+		"COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
+	},
+  "Developers": {
+    "owners": ["674985858142699532"]
+  },
+  "Servers": {
+    "Official": {
+      "One": "1001840700494729347"
+    }
+  },
+  "AI": {
+    "Apis": "OpenAI API Key (optional)"
+  },
+  "Config": {
+    "prefix": "."
+  }
 }

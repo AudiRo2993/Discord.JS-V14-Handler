@@ -12,7 +12,7 @@ module.exports = {
     try {
       await modal.execute(interaction, client);
     } catch (error) {
-      throw new Error(`No code for this modal!`);
+     console.log(error)
     }
   },
 };

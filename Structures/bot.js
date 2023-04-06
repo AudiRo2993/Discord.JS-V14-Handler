@@ -14,6 +14,7 @@ const BotToken = process.env.BotToken;
 const { loadEvents } = require("../Handlers/Events");
 const { loadCommands } = require("../Handlers/Commands");
 const { loadComponents } = require("../Handlers/Components");
+const { loadPREFIXCommands } = require("../Handlers/Prefix");
 const chalk = require("chalk");
 
 class BOT extends Client {
@@ -34,6 +35,8 @@ class BOT extends Client {
     this.commands = new Collection();
     this.subCommands = new Collection();
     this.events = new Collection();
+    this.prefix = new Collection()
+    this.aliases = new Collection()
     this.components = {
       buttons: new Collection(),
       selectMenus: new Collection(),
@@ -70,6 +73,7 @@ class BOT extends Client {
     });
     await loadCommands(this);
     await loadComponents(this);
+    await loadPREFIXCommands(this);
     await this.utils.logger();
   }
 }
