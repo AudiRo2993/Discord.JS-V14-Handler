@@ -1,4 +1,4 @@
-# Discord.JS-V14-Hander test
+# Discord.JS-V14-Hander 
  Made by AudiRo#7652 - LYXCODE Base
 # Tutorial
 > Download this code as ZIP and add it to your code editor. I prefer **Visual Studio Code**.<br />
