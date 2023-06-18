@@ -31,8 +31,6 @@ async function loadCommands(client) {
     }
   });
   client.application.commands.set(commandsArray);
-
-  
 }
 
 module.exports = { loadCommands };

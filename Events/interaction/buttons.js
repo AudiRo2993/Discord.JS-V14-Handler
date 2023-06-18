@@ -13,6 +13,6 @@ module.exports = {
       await button.execute(interaction, client);
     } catch (error) {
       console.log(error);
-       }
+    }
   },
 };

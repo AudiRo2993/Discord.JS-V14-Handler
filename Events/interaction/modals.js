@@ -12,7 +12,7 @@ module.exports = {
     try {
       await modal.execute(interaction, client);
     } catch (error) {
-     console.log(error)
+      console.log(error);
     }
   },
 };
