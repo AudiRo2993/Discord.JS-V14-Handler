@@ -1,4 +1,5 @@
 require("dotenv/config");
+const { ClusterClient, getInfo } = require('discord-hybrid-sharding');
 const { Client, Collection, Partials } = require("discord.js");
 const {
   Channel,
@@ -31,6 +32,9 @@ class BOT extends Client {
         User,
       ],
     });
+    this.shards = getInfo().SHARD_LIST;
+    this.shardCount = getInfo().TOTAL_SHARDS;
+    this.cluster = new ClusterClient(this);
     this.config = require("./config.json");
     this.commands = new Collection();
     this.subCommands = new Collection();
@@ -48,9 +52,9 @@ class BOT extends Client {
     global.chalk = chalk;
   }
 
-  async init(token) {
+  async init() {
     await loadEvents(this);
-    
+
     await this.login(BotToken).then(() => {
       console.log(
         chalk.bold.yellowBright(

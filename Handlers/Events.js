@@ -7,6 +7,7 @@ async function loadEvents(client) {
   const Files = await client.utils.loadFiles("./Events");
 
   Files.forEach((file) => {
+    console.log(file);
     const event = require(file);
     if (!event.name) return;
 
