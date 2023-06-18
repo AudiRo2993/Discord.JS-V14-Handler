@@ -52,7 +52,9 @@ module.exports = class Utils {
       const match = Connect.match(HOSTS_REGEX);
       if (!match) {
         return console.error(
-          chalk.red.bold(`[DATABASE]- Invalid connection string "${Connect}" -- Add a MONGODB URL`)
+          chalk.red.bold(
+            `[DATABASE]- Invalid connection string "${Connect}" -- Add a MONGODB URL`
+          )
         );
       }
       const dbOptions = {
@@ -109,7 +111,7 @@ module.exports = class Utils {
       const response = await get("https://reddit.com/r/memes.json");
       const { data } =
         response.data.data.children[
-        Math.floor(Math.random() * response.data.data.children.length)
+          Math.floor(Math.random() * response.data.data.children.length)
         ];
       if (data.over_18 === false) nonNSFW = data;
     }
@@ -150,9 +152,7 @@ module.exports = class Utils {
     let commands = 0;
     let subs = 0;
 
-    const Files = await (
-      await this.loadFiles("./Commands")
-    );
+    const Files = await await this.loadFiles("./Commands");
 
     Files.forEach((file) => {
       const command = require(file);

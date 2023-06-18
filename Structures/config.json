@@ -1,8 +1,8 @@
 {
   "owners": ["674985858142699532"],
   "messages": {
-		"COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
-	},
+    "COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
+  },
   "Developers": {
     "owners": ["674985858142699532"]
   },

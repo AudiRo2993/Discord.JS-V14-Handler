@@ -2,7 +2,7 @@
   "name": "discord.js-v14-template",
   "version": "1.0.0",
   "description": "Discord.js v14 Template based on Lyxcode's Handler (Advanced)",
-  "main": "index.js",
+  "main": "shard.js",
   "scripts": {
     "test": "node ."
   },
@@ -24,6 +24,7 @@
     "axios": "^0.27.2",
     "chalk": "^4.1.2",
     "colors": "^1.4.0",
+    "discord-hybrid-sharding": "^2.1.3",
     "discord.js": "^14.3.0",
     "dotenv": "^16.0.1",
     "glob": "^8.0.3",
@@ -33,6 +34,7 @@
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.8"
   }
 }

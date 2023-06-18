@@ -1,10 +1,7 @@
-
 const { DevGuild } = process.env;
-const { promisify } = require("util")
+const { promisify } = require("util");
 const { glob } = require("glob");
 const globPromise = promisify(glob);
-
-
 
 /**
  *
@@ -13,7 +10,7 @@ const globPromise = promisify(glob);
 
 async function loadPREFIXCommands(client) {
   client.prefix.clear();
-   const commandFiles = await client.utils.loadFiles("CommandsPrefix");
+  const commandFiles = await client.utils.loadFiles("CommandsPrefix");
 
   const prefixCommandsArray = [];
 
@@ -33,11 +30,10 @@ async function loadPREFIXCommands(client) {
     prefixCommandsArray.push(properties);
 
     console.log(`[ Razen ]` + " --- Loaded " + `++ ${command.name} ++`);
-    await new Promise(resolve => setTimeout(resolve, 40)); // wait for 40 milliseconds
+    await new Promise((resolve) => setTimeout(resolve, 40)); // wait for 40 milliseconds
   }
 
   // Register the prefix commands
-
 }
 
 module.exports = { loadPREFIXCommands };

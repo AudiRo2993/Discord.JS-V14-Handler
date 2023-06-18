@@ -1,4 +1,5 @@
 require("dotenv/config");
+const { ClusterClient, getInfo } = require("discord-hybrid-sharding");
 const { Client, Collection, Partials } = require("discord.js");
 const {
   Channel,
@@ -31,12 +32,15 @@ class BOT extends Client {
         User,
       ],
     });
+    this.shards = getInfo().SHARD_LIST;
+    this.shardCount = getInfo().TOTAL_SHARDS;
+    this.cluster = new ClusterClient(this);
     this.config = require("./config.json");
     this.commands = new Collection();
     this.subCommands = new Collection();
     this.events = new Collection();
-    this.prefix = new Collection()
-    this.aliases = new Collection()
+    this.prefix = new Collection();
+    this.aliases = new Collection();
     this.components = {
       buttons: new Collection(),
       selectMenus: new Collection(),
@@ -48,9 +52,9 @@ class BOT extends Client {
     global.chalk = chalk;
   }
 
-  async init(token) {
+  async init() {
     await loadEvents(this);
-    
+
     await this.login(BotToken).then(() => {
       console.log(
         chalk.bold.yellowBright(
@@ -60,16 +64,9 @@ class BOT extends Client {
       console.log(
         chalk.bold.yellowBright(
           `┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ `
-        ),
-        
+        )
       );
-      console.log(
-        chalk.bold.yellowBright(
-          `ONLINE `
-        ),
-        
-      );
-      
+      console.log(chalk.bold.yellowBright(`ONLINE `));
     });
     await loadCommands(this);
     await loadComponents(this);
@@ -77,7 +74,5 @@ class BOT extends Client {
     await this.utils.logger();
   }
 }
-
-
 
 module.exports = BOT;

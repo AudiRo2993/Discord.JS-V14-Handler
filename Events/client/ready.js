@@ -60,7 +60,5 @@ module.exports = {
     //     webhook.send({ content: `Started ${client.user.tag} Successfuly at ${new Date().toLocaleString()} ' [ <t:${Math.floor(Date.now() / 1000)}> ]`})
     //   })
     //   .catch(console.error + "Please report this error to the Developer now.");
-
-      
   },
 };

@@ -60,7 +60,6 @@ module.exports = {
       await selectMenu.execute(interaction, client);
     } catch (error) {
       console.log(error);
-     
     }
   },
 };
